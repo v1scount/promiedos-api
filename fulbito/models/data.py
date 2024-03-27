@@ -1,8 +1,8 @@
 from typing import List
 from pydantic import BaseModel
 
-from .position import TeamPosition, TeamPositionAverage
-from .top import TopScorers, TopAssists
+from position import TeamPosition, TeamPositionAverage
+from top import TopScorers, TopAssists
 
 
 class CopaLigaData(BaseModel):
