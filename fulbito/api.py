@@ -18,7 +18,7 @@ def fulbito():
         </head>
         <body>
             <h1>Fulbito</h1>
-            <p>Fulbito is a Football API. The data is extracted from https://promiedos.com.ar via web scrapping.</p>
+            <p>Fulbito is a Football API. The data is extracted from <a href="https://promiedos.com.ar">Promiedos<a/> via web scrapping.</p>
             <p>This API supports the following tournaments:</p>
             <ul>
                 <li><a href="/copa-de-la-liga">Copa de la Liga Argentina</a></li>
