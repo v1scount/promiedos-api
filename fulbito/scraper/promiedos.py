@@ -7,7 +7,7 @@ from fulbito.models.top import TopScorers, TopAssists
 from fulbito.models.position import TeamPosition, TeamPositionAverage
 
 
-class PromiedosScrapper:
+class PromiedosScraper:
     URL_COPA_LIGA_ARG = "https://www.promiedos.com.ar/copadeliga"
     URL_LIGA_ARG = "https://www.promiedos.com.ar/primera"
     URL_PREMIER = "https://www.promiedos.com.ar/inglaterra"

@@ -2,11 +2,11 @@ from fastapi import FastAPI, HTTPException
 from requests import RequestException
 from starlette.responses import HTMLResponse
 
-from fulbito.scrapper.promiedos import PromiedosScrapper
+from fulbito.scraper.promiedos import PromiedosScraper
 
 
 app = FastAPI()
-scrapper = PromiedosScrapper()
+scraper = PromiedosScraper()
 
 
 @app.get("/", response_class=HTMLResponse)
@@ -36,46 +36,46 @@ def fulbito():
 @app.get("/copa-de-la-liga")
 def copa_liga_arg():
     try:
-        return scrapper.get_copa_liga_data()
+        return scraper.get_copa_liga_data()
     except RequestException:
-        raise HTTPException(status_code=500, detail=f"Couldn't get info from {scrapper.URL_COPA_LIGA_ARG}.")
+        raise HTTPException(status_code=500, detail=f"Couldn't get info from {scraper.URL_COPA_LIGA_ARG}.")
 
 
 @app.get("/liga-argentina")
 def liga_arg():
     try:
-        return scrapper.get_liga_arg_data()
+        return scraper.get_liga_arg_data()
     except RequestException:
-        raise HTTPException(status_code=500, detail=f"Couldn't get info from {scrapper.URL_LIGA_ARG}.")
+        raise HTTPException(status_code=500, detail=f"Couldn't get info from {scraper.URL_LIGA_ARG}.")
 
 
 @app.get("/premier-league")
 def premier_league():
     try:
-        return scrapper.get_premier_league_data()
+        return scraper.get_premier_league_data()
     except RequestException:
-        raise HTTPException(status_code=500, detail=f"Couldn't get info from {scrapper.URL_PREMIER}.")
+        raise HTTPException(status_code=500, detail=f"Couldn't get info from {scraper.URL_PREMIER}.")
 
 
 @app.get("/la-liga")
 def la_liga():
     try:
-        return scrapper.get_la_liga_data()
+        return scraper.get_la_liga_data()
     except RequestException:
-        raise HTTPException(status_code=500, detail=f"Couldn't get info from {scrapper.URL_LA_LIGA}.")
+        raise HTTPException(status_code=500, detail=f"Couldn't get info from {scraper.URL_LA_LIGA}.")
 
 
 @app.get("/bundesliga")
 def bundesliga():
     try:
-        return scrapper.get_bundesliga_data()
+        return scraper.get_bundesliga_data()
     except RequestException:
-        raise HTTPException(status_code=500, detail=f"Couldn't get info from {scrapper.URL_BUNDESLIGA}.")
+        raise HTTPException(status_code=500, detail=f"Couldn't get info from {scraper.URL_BUNDESLIGA}.")
 
 
 @app.get("/serie-a")
 def serie_a():
     try:
-        return scrapper.get_serie_a_data()
+        return scraper.get_serie_a_data()
     except RequestException:
-        raise HTTPException(status_code=500, detail=f"Couldn't get info from {scrapper.URL_SERIEA}.")
+        raise HTTPException(status_code=500, detail=f"Couldn't get info from {scraper.URL_SERIEA}.")
