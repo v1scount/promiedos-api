@@ -10,7 +10,7 @@ class TeamPosition(BaseModel):
     games_played: int
     wins: int
     draws: int
-    loses: int
+    losses: int
     goals_for: int
     goals_against: int
     goals_diff: int
@@ -26,7 +26,7 @@ class TeamPosition(BaseModel):
             games_played=int(info[3]),
             wins=int(info[4]),
             draws=int(info[5]),
-            loses=int(info[6]),
+            losses=int(info[6]),
             goals_for=int(info[7]),
             goals_against=int(info[8]),
             goals_diff=int(info[9])
